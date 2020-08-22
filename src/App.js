@@ -29,18 +29,25 @@ constructor(props) {
     const {isLoaded, items} = this.state;
 
     if (!isLoaded) {
-        return <h1>Loading</h1>
+        return <h1 style={{
+          position: 'absolute',
+          top : 200,
+          left: '0%',
+          right: '0%',
+          height: 150
+        }}>Loading</h1>
     }
     
     else {
 
   return (
-    <div style={{ 
-    position: 'absolute',
-    top : 200,
-    left: '0%',
-    right: '0%',
-    height: 150,}}>
+    <div style={{
+      position: 'absolute',
+      top : 200,
+      left: '0%',
+      right: '0%',
+      height: 150
+    }}>
     <h1>
       The ISS is at {items.iss_position.longitude} longitude {items.iss_position.latitude} latitude
     </h1>
